@@ -1,0 +1,23 @@
+/* A los CSS se llaman hojas de estilo.
+ Para vincular este fichero CSS con index.html hay que
+ añadir una instruccion en el archivo html que vincule con
+ el fichero CSS  correspondiente.*/
+
+body {
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Es como crear clases. PAra ello se le pone un punto delante.*/
+.titulo {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tarea_hecha {
+    text-decoration: line-through;
+    color: #cfcfcf
+}
+
