@@ -53,11 +53,14 @@ def editar_ok(id):  # Se ejecutará esta funcion
     return redirect(url_for("home"))
 
 if __name__ == "__main__":
+    from os import getenv
+    
     # Esto va a ir al fichero db.py, poner en marcha todo lo que tenemos ahi, llegar al
     # fichero models, poner en marcha todo y mapear las clases.
     db.Base.metadata.create_all(db.engine)
-    app.run(debug=True)  # debug=True, cuando se esta desarrollando
 
+    port = int(getenv("PORT", 5000))  # Render asigna un puerto dinámico
+    app.run(host="0.0.0.0", port=port)
 """ POSIBLES ERRORES:
 Address already in use
 Port 5000 is in use by another program. Either identify and stop that program, or start the server with a different port.
